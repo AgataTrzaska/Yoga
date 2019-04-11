@@ -1,0 +1,40 @@
+<div th:fragment="table" class="container" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-dark">
+
+                <tr>
+                    <th>pose image</th>
+                    <th>pose name one</th>
+                    <th>pose name two</th>
+                    <th>pose level</th>
+                    <th>pose type</th>
+                    <th>pose therapeutic</th>
+                    <th>pose benefits</th>
+                    <th>pose Contraindications</th>
+                </tr>
+
+                <tr th:each="p : ${poses}">
+                    <td th:text = "${p.getPoseImage()}"></td>
+                    <td th:text = "${p.getPoseNameOne()}"></td>
+                    <td th:text = "${p.getPoseNameTwo()}"></td>
+                    <td th:text = "${p.getPoseLevel()}"></td>
+                    <td th:text = "${p.getPoseType()}"></td>
+                    <td th:text = "${p.getPoseBenefits()}"></td>
+                    <td th:text = "${p.getPoseTherapeutic()}"></td>
+                    <td th:text = "${p.getPoseContraindications()}"></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <form action="/delete" method="get">
+                            <input type="hidden" th:value="${p.getPoseNameOne()}" name="poses">
+                            <button class="btn btn-sm btn-warning" type="submit">
+                                <i class="fa fa-trash" aria-hidden="true"></i> Delete
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

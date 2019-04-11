@@ -1,0 +1,59 @@
+<div class="container" xmlns:th="http://www.thymeleaf.org" th:fragment="add">
+
+    <form th:action="@{/add}" th:object="${poses}" method="post" action="/add">
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 form-group">
+                <label>Pose Image</label>
+                <input type="text" name="poseImage" placeholder="poseImage" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-6 form-group">
+                <label>Pose Name One</label>
+                <input type="text" name="poseNameOne" placeholder="poseNameOne" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-6 form-group">
+                <label>Pose Name Two</label>
+                <input type="text" name="poseNameTwo" placeholder="poseNameTwo" class="form-control">
+            </div>
+
+</div>
+<div class="col-sm-12 col-md-6 form-group">
+    <label>Pose type</label>
+    <input type="text" name="poseType" placeholder="poseType" class="form-control">
+</div>
+
+
+<div class="col-sm-12 col-md-6 form-group">
+    <label>Pose benefits</label>
+    <input type="text" name="poseTypeAnatomic" placeholder="poseTypeAnatomic" class="form-control">
+</div>
+
+<div class="col-sm-12 col-md-6 form-group">
+    <label>Pose therapeutic</label>
+    <input type="text" name="poseBenefits" placeholder="poseBenefits" class="form-control">
+</div>
+
+<div class="col-sm-12 col-md-6 form-group">
+    <label>Pose contraindications</label>
+    <input type="text" name="poseLevel" placeholder="poseLevel" class="form-control">
+</div>
+        <!--div class="col-sm-12 col-md-6 form-group">
+            <label>Pose Favorite</label>
+            <input type="checkbox" name="poseFavorite" placeholder="poseFavorite" class="form-control">
+        </div>
+        <div class="col-sm-12 col-md-6 form-group">
+            <label>Pose Add</label>
+            <input type="checkbox" name="poseAdd" class="form-control">
+        </div-->
+
+<div class="form-row">
+    <div class="col-sm-12 text-right form-group">
+        <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus-square"
+                                                                aria-hidden="true"></i> Create
+        </button>
+    </div>
+</div>
+</form>
+
+
+<hr>
+</div>

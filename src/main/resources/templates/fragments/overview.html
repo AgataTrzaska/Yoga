@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head xmlns:th="http://www.thymeleaf.com" th:replace="fragments/head :: head">
+    <div class="container" xmlns:th="http://www.thymeleaf.org" th:fragment="poses">
+
+        <style>
+            body{
+                background-size: 40%;
+                background-image: url("https://png.pngtree.com/thumb_back/fh260/20170107/pngtree-Pattern-Damask-Embroidery-Wallpaper-background-photo-379007.jpg");
+                background-position: left;
+                background-repeat: repeat;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 2fr 2fr 2fr;
+                grid-template-rows: 0.8fr 1.9fr;
+                grid-template-areas: "name name name name name name" "image lvl type benefits therapeutic cont";
+                grid-column-gap: 10px;
+            }
+
+            .name {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-area: name;
+                padding: 2%;
+                background: rgba(250, 250, 210, 0.5);
+                border-top-right-radius: 20%;
+                border-top-left-radius: 20%;
+                text-align: center;
+                border-style: solid;
+                border-width: 0px 0px 13px;
+                border-image: url("https://png.pngtree.com/thumb_back/fh260/20170107/pngtree-Pattern-Damask-Embroidery-Wallpaper-background-photo-379007.jpg") 0 0 26 repeat;
+            }
+
+            .image {
+                grid-area: image;
+                padding: 1%;
+                background: rgba(250, 250, 210, 0.5);
+            }
+
+            .lvl {
+                grid-area: lvl;
+                padding: 1%;
+                background: rgba(250, 250, 210, 0.5);
+                text-align: justify;
+            }
+
+            .type {
+                grid-area: type;
+                padding: 1%;
+                background: rgba(250, 250, 210, 0.5);
+                text-align: justify;
+            }
+
+            .benefits {
+                grid-area: benefits;
+                padding: 1%;
+                background: rgba(250, 250, 210, 0.5);
+                text-align: justify;
+            }
+
+            .therapeutic {
+                grid-area: therapeutic;
+                padding: 3%;
+                background: rgba(250, 250, 210, 0.5);
+                text-align: justify;
+            }
+
+            .cont {
+                grid-area: cont;
+                padding: 1%;
+                background: rgba(250, 250, 210, 0.5);
+                text-align: justify;
+            }
+
+            .cen{
+                text-align: center;
+            }
+        </style>
+        </head>
+<body>
+
+<div class="grid-container" th:each="p : ${poses}">
+    <div class="name">
+        <span class="card-title" th:text="${p.getPoseNameOne()}"></span>
+        <p>Nazwa sanskrycka: <span class="card-title" th:text="${p.getPoseNameTwo()}"></span></p><!-- Image -->
+    </div>
+    <p></p>
+    <div class="image">
+        <img th:src="@{${p.getPoseImage()}}" alt="Yoga" style="height: auto;width: 80%">
+    </div>
+        <!-- Text Content -->
+    <div class="lvl">
+        <p class="cen">Poziom:</p>
+        <h6 class="card-title" th:text="${p.getPoseLevel()}"></h6>
+    </div>
+    <div class="type">
+        <p class="cen">Typ:</p>
+        <h7 class="card-title" th:text="${p.getPoseType()}"></h7>
+    </div>
+    <div class="benefits">
+        <p class="cen">Dla ciała:</p>
+        <h8 class="card-title" th:text="${p.getPoseBenefits()}"></h8>
+    </div>
+    <div class="therapeutic">
+        <p class="cen">Dodatkowo:</p>
+        <h9 class="card-title" th:text="${p.getPoseTherapeutic()}"></h9>
+    </div>
+    <div class="cont">
+        <p class="cen">Przeciwwskazania:</p>
+        <h10 class="card-title" th:text="${p.getPoseContraindications()}"/>
+    </div>
+</div>
+<!--form th:action="@{/addfav}" method="get">
+<input type="checkbox" name="check" value="1"/>
+    <input th:type="submit" value="submit"/>
+
+</form-->
+</body>

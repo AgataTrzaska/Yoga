@@ -1,0 +1,23 @@
+body{
+    height: 100vh;
+    background-image: url("https://previews.123rf.com/images/amovitania/amovitania1608/amovitania160800004/61661691-colorful-tiles-boho-pattern-hexagon-mandala-background-abstract-flower-ornament-.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content {
+    color: white;
+    font-size: 20px;
+}
+.content-header {
+    font-family: 'Oleo Script', cursive;
+    color: white;
+    font-size: 30px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}

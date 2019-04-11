@@ -1,0 +1,39 @@
+<div class="container" xmlns:th="http://www.thymeleaf.org" th:fragment="addfav">
+
+    <form th:action="@{/addfav}" th:object="${poses}" method="post" action="/addfav">
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 form-group">
+                <label>Pose Image</label>
+            <div class="col-sm-12 col-md-6 form-group">
+                <label>Pose Name One</label>
+            <div class="col-sm-12 col-md-6 form-group">
+                <label>Pose Name Two</label>
+        <div class="col-sm-12 col-md-6 form-group">
+            <label>Pose type</label>
+        </div>
+        <div class="col-sm-12 col-md-6 form-group">
+            <label>Pose type anatomic</label>
+        </div>
+        <div class="col-sm-12 col-md-6 form-group">
+            <label>Pose benefits</label>
+        </div>
+        <div class="col-sm-12 col-md-6 form-group">
+            <label>Pose Level</label>
+        </div>
+        <div class="col-sm-12 col-md-6 form-group">
+            <label>Pose Favorite</label>
+        </div>
+        <div class="col-sm-12 col-md-6 form-group">
+            <label>Pose Add</label>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-12 text-right form-group">
+                <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus-square"
+                                                                        aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+    <hr>

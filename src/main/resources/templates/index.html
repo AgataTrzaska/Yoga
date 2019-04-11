@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head xmlns:th="http://www.thymeleaf.com" th:replace="fragments/head :: head">
+
+</head>
+<body>
+<div class="container">
+    <div class="col-12 text-center">
+        <h3 class="font-weight-light content">Pozycje w jodze</h3>
+        <!--p th:text="${message}" style="color: white"></p-->
+        <a href="/poses"><p>Poses admin panel</p></a> <br>
+        <a href="/addfav"><p>Poses user panel</p></a> <br>
+        <a href="/logout"><p>logout</p></a> <br>
+        <!--a href="/rand"><p>Losowa pozycja</p></a>
+        <a href="/excel"><p>create .xls file</p></a>
+        <hr-->
+    </div>
+
+    <div class="row">
+        <div th:replace="fragments/overview :: poses"></div>
+    </div>
+</div>
+
+
+</body>
+</html>
