@@ -80,9 +80,9 @@ public String addPose(@ModelAttribute PoseDto poseDto){
         return "index";
 }
 
-@GetMapping("/random")
+//@GetMapping("/random")
 
-}
+//}
 }
     //@GetMapping("/addfav")
     //public String addPose(@RequestParam boolean check){
